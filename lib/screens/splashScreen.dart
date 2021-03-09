@@ -20,10 +20,10 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     Future.delayed(const Duration(milliseconds: 2000), () {
       FirebaseAuth.instance.authStateChanges().listen((User user) {
         if (user == null) {
-          Navigator.pushNamed(context, '/phoneAuth');
+          Navigator.of(context).pushNamedAndRemoveUntil('/phoneAuth', (Route<dynamic> route) => false);
         } else {
           print('User is signed in!');
-          Navigator.pushNamed(context, '/home');
+          Navigator.of(context).pushNamedAndRemoveUntil('/home', (Route<dynamic> route) => false);
 
         }
       });
