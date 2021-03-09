@@ -5,7 +5,7 @@ import 'package:front_task/model/modelClass.dart';
 import 'package:front_task/utils.dart';
 import 'package:http/http.dart' as http;
 
-import '../custom_toast.dart';
+import '../views/custom_toast.dart';
 
 class ProviderNews extends ChangeNotifier{
   NewsModel newsModel;
